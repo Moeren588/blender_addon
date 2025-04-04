@@ -2,6 +2,7 @@ import bpy
 
 bl_info = {
     'name' : 'Martin Blender Workflow',
+    'description' : 'My own Blender tools with tools I find useful',
     'blender' : (4, 1, 0),
     'version' : (0, 1, 0),
 }
@@ -15,7 +16,7 @@ class MBW_PT_MainPanel(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
-        layout.label(text="Martin's Blender tools and stuff")
+        layout.label(text=f"MB Flow {bl_info['version'][0]}.{bl_info['version'][1]}.{bl_info['version'][2]}")
 
 classes = [
     MBW_PT_MainPanel,
