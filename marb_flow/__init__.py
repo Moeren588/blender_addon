@@ -1,5 +1,7 @@
 import bpy
 
+from .utils.logging_helper import log_console_message
+
 from .modelling import modelling_ui, modelling_operator
 
 bl_info = {
@@ -34,6 +36,7 @@ def register():
     modelling_operator.register()
     modelling_ui.register()
 
+    log_console_message('sys', f'Loaded Martin Blender Workflow v.{bl_info['version'][0]}.{bl_info['version'][1]}.{bl_info['version'][2]}')
 
 def unregister():
     # Modelling

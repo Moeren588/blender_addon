@@ -14,7 +14,7 @@ class MOD_PT_MainPanel(bpy.types.Panel):
         layout = self.layout
         row_ref_img = layout.row()
         row_ref_img.prop(context.scene, 'mod_reference_image', text='Reference Image')
-        row_ref_img.operator('mod.import_reference_image', text='Import Reference Image')
+        row_ref_img.operator(modelling_operator.MOD_OT_ImportReferenceImage.bl_idname, text=modelling_operator.MOD_OT_ImportReferenceImage.bl_label)
         
         # return super().draw(context)
 
